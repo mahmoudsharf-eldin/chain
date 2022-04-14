@@ -26,7 +26,7 @@ class ChainFieldController extends Controller
                     abort(response()->json([]));
                 })
                 ->resolveFields($request) 
-                ->each->resolve($resource)
+                ->each->resolve($resource->model())
                 ->authorized($request); 
     }
 }
